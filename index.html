@@ -15,15 +15,21 @@
         <form method="GET" action="results.html">
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <span class="required-field">*</span>
+                <input type="text" id="firstname" name="firstname" required="required" minlength="2" maxlength="35">
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" required="required" minlength="2" maxlength="35">
+                <label for="age">Your Age</label>
+                <input type="number" id="age" name="age" min="21" max="120">
+                <h5>You must be Tewnty-One (21) years or older in order to participate.</h5>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <span class="required-field">*</span>
+                    <input type="email" id="email" name="email" required="required" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -86,7 +92,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP code">
                 </div>
             </fieldset>
 
